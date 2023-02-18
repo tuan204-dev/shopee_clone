@@ -94,6 +94,7 @@
   animation: brightenOut2 0.25s ease;
   will-change: opacity, transform;
   transform-origin: 36.6rem 0;
+  z-index: 99;
 }
 .header .navbar .navbar-list .navbar-item .header-notify::after {
   content: "";
@@ -105,15 +106,14 @@
   position: absolute;
   top: -0.2rem;
   right: 2rem;
-  z-index: -1;
 }
 .header .navbar .navbar-list .navbar-item .header-notify::before {
   content: "";
   position: absolute;
-  top: -2rem;
+  top: -1rem;
   right: 0;
   left: 0;
-  height: 4rem;
+  height: 1rem;
   background-color: transparent;
 }
 .header .navbar .navbar-list .navbar-item .header-notify .notify-header {
@@ -167,6 +167,7 @@
 }
 .header .navbar .navbar-list .navbar-item:hover .language-selection {
   display: flex;
+  flex-direction: column;
 }
 .header .navbar .navbar-list .navbar-item .language-selection {
   display: none;
@@ -183,6 +184,7 @@
   animation: brightenOut2 0.15s ease;
   will-change: opacity, transform;
   transform-origin: 15rem -0.8rem;
+  z-index: 99;
 }
 .header .navbar .navbar-list .navbar-item .language-selection::after {
   content: "";
@@ -199,14 +201,15 @@
 .header .navbar .navbar-list .navbar-item .language-selection::before {
   content: "";
   position: absolute;
-  top: -2rem;
+  top: -1rem;
   right: 0;
   left: 0;
-  height: 4rem;
+  height: 1rem;
   background-color: transparent;
 }
 .header .navbar .navbar-list .navbar-item .language-selection .language-item {
   color: #1e1e1e;
+  display: inline-block;
 }
 .header .navbar .navbar-list .navbar-item .language-selection .language-item:hover {
   color: #ff3b29;
@@ -245,10 +248,10 @@
 .header .navbar .navbar-list .navbar-item .user-menu::before {
   content: "";
   position: absolute;
-  top: -2rem;
+  top: -1rem;
   right: 0;
   left: 0;
-  height: 4rem;
+  height: 1rem;
   background-color: transparent;
 }
 .header .navbar .navbar-list .navbar-item .user-menu ul {
@@ -264,6 +267,96 @@
 .header .navbar .navbar-list .navbar-item .user-menu ul li a:hover {
   color: #00bfa5;
   background-color: #fafafa;
+}
+.header .header-search {
+  height: 8.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 1.6rem;
+}
+.header .header-search .logo-section {
+  width: 20rem;
+}
+.header .header-search .logo-section .icon-shopee-logo {
+  fill: var(--white-color);
+  height: 5rem;
+}
+.header .header-search .search-section {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+.header .header-search .search-section .search-form {
+  position: relative;
+}
+.header .header-search .search-section .search-form .form-control {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  color: #757575;
+}
+.header .header-search .search-section .search-form .search-submit-btn {
+  position: absolute;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #fb5533;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  border-radius: 0.2rem;
+  top: 0.2rem;
+  right: 0.2rem;
+}
+.header .header-search .search-section .search-form .search-submit-btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.header .header-search .search-section .suggestion {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: auto 0;
+  height: 3rem;
+}
+.header .header-search .search-section .suggestion .suggestion-item {
+  font-size: 1.2rem;
+  color: var(--white-color);
+  font-weight: 400;
+  opacity: 0.95;
+}
+.header .header-search .search-section .suggestion .suggestion-item + .suggestion-item {
+  padding-left: 1.4rem;
+}
+.header .header-search .cart-section {
+  width: 16rem;
+  margin-top: -1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  margin-left: 1rem;
+}
+.header .header-search .cart-section .icon-cart {
+  fill: var(--white-color);
+  height: 2.6rem;
+  position: relative;
+}
+.header .header-search .cart-section .cart-quantity {
+  display: inline-block;
+  padding-inline: 0.4rem;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  color: #f53d2d;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 25%;
+  right: 33%;
 }
 
 @keyframes brightenOut1 {
