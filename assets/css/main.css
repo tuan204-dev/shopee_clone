@@ -25,14 +25,14 @@
 }
 .header .navbar .navbar-list a {
   text-decoration: none;
-  color: var(--white-color);
+  color: #ffffff;
 }
 .header .navbar .navbar-list a:hover {
   opacity: 0.75;
 }
 .header .navbar .navbar-list .navbar-item {
   display: inline-block;
-  color: var(--white-color);
+  color: #ffffff;
   padding: 0.8rem;
   position: relative;
 }
@@ -41,7 +41,7 @@
 }
 .header .navbar .navbar-list .navbar-item .sub-navbar {
   display: none;
-  background-color: var(--white-color);
+  background-color: #ffffff;
   width: 19rem;
   position: absolute;
   z-index: 99;
@@ -84,7 +84,7 @@
 .header .navbar .navbar-list .navbar-item .header-notify {
   display: none;
   position: absolute;
-  background-color: var(--background-color);
+  background-color: #f8f8f8;
   top: 0;
   right: 0;
   width: 40rem;
@@ -100,7 +100,7 @@
   content: "";
   height: 3rem;
   width: 3rem;
-  background-color: var(--background-color);
+  background-color: #f8f8f8;
   border-radius: 0.3rem;
   rotate: 45deg;
   position: absolute;
@@ -174,7 +174,7 @@
   position: absolute;
   top: 3.5rem;
   right: 0;
-  background-color: var(--background-color);
+  background-color: #f8f8f8;
   padding: 1.2rem 1.2rem;
   font-size: 1.4rem;
   width: 16rem;
@@ -190,7 +190,7 @@
   content: "";
   height: 3rem;
   width: 3rem;
-  background-color: var(--background-color);
+  background-color: #f8f8f8;
   border-radius: 0.3rem;
   rotate: 45deg;
   position: absolute;
@@ -226,7 +226,7 @@
   top: 100%;
   right: 0;
   width: 15rem;
-  background-color: var(--background-color);
+  background-color: #f8f8f8;
   border-radius: 0.3rem;
   transform-origin: 11.5rem -0.8rem;
   animation: brightenOut2 0.15s ease;
@@ -237,7 +237,7 @@
   content: "";
   height: 3rem;
   width: 3rem;
-  background-color: var(--background-color);
+  background-color: #f8f8f8;
   border-radius: 0.3rem;
   rotate: 45deg;
   position: absolute;
@@ -279,7 +279,7 @@
   width: 20rem;
 }
 .header .header-search .logo-section .icon-shopee-logo {
-  fill: var(--white-color);
+  fill: #ffffff;
   height: 5rem;
 }
 .header .header-search .search-section {
@@ -305,7 +305,7 @@
   padding: 1rem 2rem;
   border: none;
   background-color: #fb5533;
-  color: var(--white-color);
+  color: #ffffff;
   font-size: 1.4rem;
   border-radius: 0.2rem;
   top: 0.2rem;
@@ -313,6 +313,28 @@
 }
 .header .header-search .search-section .search-form .search-submit-btn:hover {
   opacity: 0.9;
+  cursor: pointer;
+}
+.header .header-search .search-section .search-form .search-suggestion {
+  display: none;
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+  list-style: none;
+  color: #202020;
+  background-color: #ffffff;
+  width: 100%;
+  position: absolute;
+  top: 115%;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.header .header-search .search-section .search-form .search-suggestion .search-suggestion-item {
+  font-size: 1.4rem;
+  padding: 1rem 1.5rem;
+}
+.header .header-search .search-section .search-form .search-suggestion .search-suggestion-item:hover {
+  background-color: #f0f0f0;
   cursor: pointer;
 }
 .header .header-search .search-section .suggestion {
@@ -325,9 +347,13 @@
 }
 .header .header-search .search-section .suggestion .suggestion-item {
   font-size: 1.2rem;
-  color: var(--white-color);
+  color: #ffffff;
   font-weight: 400;
   opacity: 0.95;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .header .header-search .search-section .suggestion .suggestion-item + .suggestion-item {
   padding-left: 1.4rem;
@@ -343,7 +369,7 @@
   margin-left: 1rem;
 }
 .header .header-search .cart-section .icon-cart {
-  fill: var(--white-color);
+  fill: #ffffff;
   height: 2.6rem;
   position: relative;
 }
@@ -353,7 +379,7 @@
   border-radius: 0.8rem;
   font-size: 1.4rem;
   color: #f53d2d;
-  background-color: var(--white-color);
+  background-color: #ffffff;
   position: absolute;
   top: 25%;
   right: 33%;
@@ -386,12 +412,7 @@
   height: 1.6rem;
   width: 0.1rem;
   right: -0.2rem;
-  background-color: var(--white-color);
+  background-color: #ffffff;
   opacity: 0.5;
   border-radius: 0.05rem;
-}
-
-.container {
-  height: 1000px;
-  background-color: #ccc;
 }/*# sourceMappingURL=main.css.map */
