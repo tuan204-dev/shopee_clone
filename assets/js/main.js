@@ -10,3 +10,26 @@ searchInput.addEventListener('focus', () => {
 searchInput.addEventListener('blur', () => {
   searchSuggestion.removeAttribute('style');
 });
+
+
+
+// Slider
+
+$(document).ready(function(){
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToScroll: 1,
+    infinite: true,
+    arrow: false,
+    prevArrow: `<div class="slider-arrow slider-prev">
+                  <i class="fa-solid fa-angle-left"></i>
+                </div>`,
+    nextArrow: `<div class="slider-arrow slider-next">
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>`,
+    dots: true,
+  });
+});

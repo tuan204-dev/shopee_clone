@@ -1,5 +1,20 @@
+@import 'variable';
+
+
+@mixin arrowUp {
+  height: 3rem;
+  width: 3rem;
+  background-color: $background-color;
+  border-radius: .3rem;
+  rotate: 45deg;
+  position: absolute;
+  top: -.2rem;
+  right: 2rem;
+}
+
+
 .header {
-  height: $header-height;
+  height: 12rem;
   background-image: linear-gradient(-180deg, #f53d2d, #f63);
   position: fixed;
   top: 0;
@@ -111,7 +126,7 @@
 
           &::after {
             content: "";
-            @include arrowUp();
+            @include arrowUp;
             // z-index: -1;
           }
 
@@ -213,7 +228,7 @@
 
           &::after {
             content: "";
-            @include arrowUp();
+            @include arrowUp;
             z-index: -1;
           }
 
@@ -261,7 +276,7 @@
 
           &::after {
             content: "";
-            @include arrowUp();
+            @include arrowUp;
             z-index: -1;
           }
 
@@ -355,7 +370,7 @@
           display: none;
           padding: 0;
           margin: 0;
-          z-index: 99;
+          z-index: 50;
           list-style: none;
           color: #202020;
           background-color: $white-color;
@@ -442,16 +457,6 @@
   }
 }
 
-@mixin arrowUp {
-  height: 3rem;
-  width: 3rem;
-  background-color: $background-color;
-  border-radius: .3rem;
-  rotate: 45deg;
-  position: absolute;
-  top: -.2rem;
-  right: 2rem;
-}
 
 @keyframes brightenOut1 {
   0% {

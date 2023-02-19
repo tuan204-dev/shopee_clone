@@ -319,7 +319,7 @@
   display: none;
   padding: 0;
   margin: 0;
-  z-index: 99;
+  z-index: 50;
   list-style: none;
   color: #202020;
   background-color: #ffffff;
@@ -415,4 +415,167 @@
   background-color: #ffffff;
   opacity: 0.5;
   border-radius: 0.05rem;
+}
+
+.banner-section {
+  padding-top: 3rem;
+  background-color: #ffffff;
+}
+.banner-section .home-banner {
+  display: flex;
+  height: 23.5rem;
+}
+.banner-section .home-banner .slider + .banner-right {
+  padding-left: 0.5rem;
+}
+.banner-section .home-banner .slider {
+  flex: 2;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  position: relative;
+  cursor: pointer;
+}
+.banner-section .home-banner .slider:hover .slider-arrow {
+  opacity: 0.8;
+}
+.banner-section .home-banner .slider .slider-arrow {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 2.4rem;
+  padding: 1.2rem 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.2s;
+  will-change: opacity;
+}
+.banner-section .home-banner .slider .slider-arrow:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.banner-section .home-banner .slider .slider-prev {
+  left: 0;
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+.banner-section .home-banner .slider .slider-next {
+  right: 0;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+.banner-section .home-banner .slider .slick-dots {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex !important;
+  gap: 0 1rem;
+  cursor: default;
+  margin-bottom: 1.5rem;
+}
+.banner-section .home-banner .slider .slick-dots .slick-active button {
+  background-color: #ee4d2d;
+}
+.banner-section .home-banner .slider .slick-dots button {
+  font-size: 0;
+  padding: 0.35rem;
+  border-radius: 50%;
+  border: 0.05rem solid hsla(0deg, 0%, 53.7%, 0.4);
+  cursor: pointer;
+  background-color: hsla(0deg, 0%, 100%, 0.4);
+}
+.banner-section .home-banner .slider .slider-item {
+  width: 100%;
+  height: 100%;
+}
+.banner-section .home-banner .slider .slider-item .slider-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner-section .home-banner .slider .slick-pre {
+  position: absolute;
+}
+.banner-section .home-banner .banner-right {
+  flex: 1;
+}
+.banner-section .home-banner .banner-right ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.banner-section .home-banner .banner-right ul .banner-right-item + .banner-right-item {
+  margin-top: 0.5rem;
+}
+.banner-section .home-banner .banner-right ul .banner-right-item {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0.3rem;
+}
+.banner-section .home-banner .banner-right ul .banner-right-item img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.banner-section .promo-list {
+  height: 11.5rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.banner-section .promo-list .promo-item {
+  width: 11rem;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.03s ease;
+  will-change: transform;
+}
+.banner-section .promo-list .promo-item:hover {
+  transform: translateY(-0.2rem);
+}
+.banner-section .promo-list .promo-item a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.banner-section .promo-list .promo-item a img {
+  width: 4.5rem;
+  margin: 1.5rem auto;
+}
+.banner-section .promo-list .promo-item a p {
+  text-transform: capitalize;
+  padding: 0 0 0.8rem;
+  margin: 0;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 1.3rem;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: pre-line;
+  inline-size: 11rem;
+}
+
+.container {
+  margin-top: 12rem;
+  background-color: #f5f5f5;
 }/*# sourceMappingURL=main.css.map */
