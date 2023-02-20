@@ -379,7 +379,7 @@
           top: 115%;
           border-radius: .3rem;
           overflow: hidden;
-
+          
 
           .search-suggestion-item {
             font-size: 1.4rem;
@@ -414,6 +414,8 @@
           -webkit-line-clamp: 1;
           -webkit-box-orient: vertical;
           overflow: hidden;
+          cursor: pointer;
+      
         }
 
         .suggestion-item+.suggestion-item {
@@ -433,11 +435,13 @@
       position: relative;
       height: 100%;
       margin-left: 1rem;
-
+      
       .icon-cart {
         fill: $white-color;
         height: 2.6rem;
         position: relative;
+        cursor: pointer;
+      
       }
 
       .cart-quantity {
@@ -450,7 +454,7 @@
         position: absolute;
         top: 25%;
         right: 33%;
-
+        cursor: pointer;
       }
 
     }

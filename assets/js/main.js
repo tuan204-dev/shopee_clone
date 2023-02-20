@@ -33,3 +33,20 @@ $(document).ready(function(){
     dots: true,
   });
 });
+
+// Category
+const category = document.querySelector('.category-section');
+const categoryList = category.querySelector('.category-list');
+const nextBtn = category.querySelector('.catagory-next-btn');
+const prevBtn = category.querySelector('.catagory-prev-btn');
+nextBtn.onclick = () => {
+  categoryList.setAttribute('style', `transform: translateX(-${categoryList.clientWidth - 1200}px)`);
+  nextBtn.style = "visibility: hidden;";
+  prevBtn.style = "visibility: visible;";
+}
+prevBtn.onclick = () => {
+  categoryList.removeAttribute('style');
+  nextBtn.style = "visibility: visible;";
+  prevBtn.style = "visibility: hidden;";
+}
+
