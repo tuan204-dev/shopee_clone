@@ -36,17 +36,76 @@ $(document).ready(function(){
 
 // Category
 const category = document.querySelector('.category-section');
+const categoryContent = category.querySelector('.category-content');
 const categoryList = category.querySelector('.category-list');
-const nextBtn = category.querySelector('.catagory-next-btn');
-const prevBtn = category.querySelector('.catagory-prev-btn');
-nextBtn.onclick = () => {
-  categoryList.setAttribute('style', `transform: translateX(-${categoryList.clientWidth - 1200}px)`);
-  nextBtn.style = "visibility: hidden;";
-  prevBtn.style = "visibility: visible;";
-}
-prevBtn.onclick = () => {
-  categoryList.removeAttribute('style');
-  nextBtn.style = "visibility: visible;";
-  prevBtn.style = "visibility: hidden;";
-}
+const categoryItem = categoryList.querySelector('.category-item');
+const nextBtn = category.querySelector('.category-next-btn');
+const prevBtn = category.querySelector('.category-prev-btn');
+const listWidth = categoryList.children.length * categoryItem.clientWidth;
+console.log(listWidth);
+
+
+nextBtn.addEventListener('click', () => {
+  categoryList.scrollLeft += categoryItem.clientWidth * 5;
+  setTimeout(() => {
+    if(categoryList.scrollLeft !== 0) {
+      prevBtn.style = `visibility: visible;`
+    }
+
+    if((listWidth - Math.round(categoryList.scrollLeft)) === categoryList.clientWidth) {
+      nextBtn.style = `visibility: hidden;`;
+    }
+  }, 400)
+});
+
+prevBtn.addEventListener('click', () => {
+  categoryList.scrollLeft -= categoryItem.clientWidth * 5;
+  setTimeout(() => {
+    if(categoryList.scrollLeft === 0) {
+      prevBtn.style = `visibility: hidden;`
+    }
+
+    if((listWidth - Math.round(categoryList.scrollLeft)) !== categoryList.clientWidth) {
+      nextBtn.style = `visibility: visible;`;
+    }
+  }, 400)
+})
+
+// Sale
+const sale = document.querySelector('.sale-section');
+const saleContent = sale.querySelector('.sale-content');
+const saleList = sale.querySelector('.sale-list');
+const saleItem = saleList.querySelector('.sale-item');
+const saleNextBtn = sale.querySelector('.sale-next-btn');
+const salePrevBtn = sale.querySelector('.sale-prev-btn');
+const saleListWidth = saleList.children.length * saleItem.clientWidth;
+console.log(saleListWidth);
+
+
+saleNextBtn.addEventListener('click', () => {
+  saleList.scrollLeft += saleItem.clientWidth * 5;
+  setTimeout(() => {
+    if(saleList.scrollLeft !== 0) {
+      salePrevBtn.style = `visibility: visible;`
+    }
+
+    if((saleListWidth - Math.round(saleList.scrollLeft)) === saleList.clientWidth) {
+      saleNextBtn.style = `visibility: hidden;`;
+    }
+  }, 400)
+});
+
+salePrevBtn.addEventListener('click', () => {
+  saleList.scrollLeft -= saleItem.clientWidth * 5;
+  setTimeout(() => {
+    if(saleList.scrollLeft === 0) {
+      salePrevBtn.style = `visibility: hidden;`
+    }
+
+    if((saleListWidth - Math.round(saleList.scrollLeft)) !== saleList.clientWidth) {
+      saleNextBtn.style = `visibility: visible;`;
+    }
+  }, 400)
+})
+  
 

@@ -119,7 +119,7 @@
           top: 3.5rem;
           border-radius: .3rem;
           box-shadow: 0 0 1.8rem rgba($color: $black-color, $alpha: .2);
-          animation: brightenOut2 .25s ease;
+          animation: brightenOut2 .2s ease;
           will-change: opacity, transform;
           transform-origin: 36.6rem 0;
           z-index: 99;
@@ -379,7 +379,7 @@
           top: 115%;
           border-radius: .3rem;
           overflow: hidden;
-          
+
 
           .search-suggestion-item {
             font-size: 1.4rem;
@@ -415,7 +415,7 @@
           -webkit-box-orient: vertical;
           overflow: hidden;
           cursor: pointer;
-      
+
         }
 
         .suggestion-item+.suggestion-item {
@@ -435,13 +435,13 @@
       position: relative;
       height: 100%;
       margin-left: 1rem;
-      
+
       .icon-cart {
         fill: $white-color;
         height: 2.6rem;
         position: relative;
         cursor: pointer;
-      
+
       }
 
       .cart-quantity {
