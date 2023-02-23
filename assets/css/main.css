@@ -593,6 +593,7 @@
 }
 .category-section .category-content {
   position: relative;
+  background-color: #ffffff;
 }
 .category-section .category-content:hover .category-btn {
   width: 5rem;
@@ -639,6 +640,9 @@
 }
 .category-section .category-content .category-list .category-item .category-group {
   width: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .category-section .category-content .category-list .category-item .category-group .category-group-item {
   height: 15rem;
